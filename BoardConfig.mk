@@ -44,6 +44,14 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_find5_defconfig
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#  LOCAL_KERNEL := device/oppo/find5/kernel
+#else
+#  LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
+#kernel prebuilt
+#PRODUCT_COPY_FILES += \
+#$(LOCAL_KERNEL):kernel 
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
